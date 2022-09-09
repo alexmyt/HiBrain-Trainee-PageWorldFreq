@@ -12,6 +12,9 @@
 
 ### Реализация
 
+По умолчанию сервер запускается по адресу `http://localhost:3000`. Тестовый маршрут `/getFrequency` с одним или несколькими параметрами `url`, например:
+> `http://localhost:3000/getFrequency?url=http://habr.com&url=http://hibrain.ru&url=https://ru.wikipedia.org/`
+
 **Используемые пакеты**
 
 - [HAPI](https://hapi.dev/) - HTTP-сервер
@@ -33,5 +36,6 @@
 
 `npm start`
 
-### Использование
-http://localhost:3000/getFrequency?url=http://habr.com&url=http://hibrain.ru&url=https://github.com/motdotla/dotenv&url=https://ru.wikipedia.org/
+### TODO
+- [ ] Сделать обработку ошибок получения URL
+- [ ] Возможно, для таких задач API должно быть асинхронным: запрос создает задачу, сервер обрабатывает запрос и сохраняет результаты, следующий запрос получает статус и/или результат выполнени задачи
